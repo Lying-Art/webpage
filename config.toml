@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://eloquent-fermi-efcbee.netlify.com/"
 languageCode = "ja-jp"
 title = "Lying."
 theme = "ananke"
