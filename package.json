@@ -2,6 +2,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "webpack": "webpack",
+    "hugo": "hugo",
     "build": "webpack && hugo",
     "serve": "webpack --watch & hugo server"
   },
