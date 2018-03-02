@@ -12,7 +12,7 @@ module.exports = [{
         {
           loader: 'file-loader',
           options: {
-            name: '../bundle.css',
+            name: 'static/bundle.css',
           },
         },
         { loader: 'extract-loader' },
@@ -37,7 +37,7 @@ module.exports = [{
 module.exports.push({
   entry: "./app.js",
   output: {
-    filename: "../bundle.js"
+    filename: "static/bundle.js"
   },
   module: {
     loaders: [{

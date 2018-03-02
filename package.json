@@ -1,7 +1,9 @@
 {
   "scripts": {
     "start": "webpack-dev-server",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "build": "webpack && hugo",
+    "serve": "webpack --watch & hugo server"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -17,6 +19,7 @@
   },
   "dependencies": {
     "@material/button": "^0.31.0",
-    "@material/ripple": "^0.31.0"
+    "@material/ripple": "^0.31.0",
+    "hugo-bin": "^0.23.0"
   }
 }
