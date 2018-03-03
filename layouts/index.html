@@ -1,17 +1,72 @@
 {{ define "main" }}
 <div id="home_bgcover"></div>
-<div id="home_header">
+<section id="home_header">
   <img src="/images/lying-logo.svg" alt="lying." id="home_header-logo">
   <div class="home_links">
     <div class="inline-block">
-      <a href="#" class="mdc-button home_link">About</a>
+      <a href="#home_about" class="mdc-button home_link" data-mt-duration="300">About</a>
       <a href="#" class="mdc-button home_link">Books</a>
       <a href="#" class="mdc-button home_link">Blog</a>
     </div>
     <div class="inline-block">
-      <a href="#" class="mdc-button home_link">Contact</a>
+      <a href="#home_contact" class="mdc-button home_link">Contact</a>
       <a href="#" class="mdc-button home_link">Pixiv</a>
     </div>
   </div>
-</div>
+</section>
+
+<section id="home_about" class="home_content mdc-typography--body1">
+  <h1 class="mdc-typography--display2">About</h1>
+  <p>
+    初めまして、かぐまにくすと申します。 <br>
+    <br>
+    サークル Lying. にて背景やコンセプトアートを製作しております。 <br>
+    <br>
+    ご依頼やご意見等がございましたら、下記フォームより連絡していただけると幸いです。 <br>
+  </p>
+</section>
+
+<section id="home_contact" class="home_content mdc-typography--body1">
+  <h1 class="mdc-typography--display2">Contact</h1>
+  <form class="home_contact-form" action="index.html" method="post">
+
+    <div class="mdc-text-field mdc-text-field--outlined">
+      <input type="text" id="tf-outlined" class="mdc-text-field__input">
+      <label for="tf-outlined" class="mdc-text-field__label">名前</label>
+      <div class="mdc-text-field__outline">
+        <svg>
+          <path class="mdc-text-field__outline-path"/>
+        </svg>
+      </div>
+      <div class="mdc-text-field__idle-outline"></div>
+    </div><br>
+
+    <div class="mdc-text-field mdc-text-field--outlined">
+      <input type="text" id="tf-outlined" class="mdc-text-field__input">
+      <label for="tf-outlined" class="mdc-text-field__label">メールアドレス</label>
+      <div class="mdc-text-field__outline">
+        <svg>
+          <path class="mdc-text-field__outline-path"/>
+        </svg>
+      </div>
+      <div class="mdc-text-field__idle-outline"></div>
+    </div><br>
+
+    <div class="mdc-text-field mdc-text-field--textarea">
+      <textarea id="textarea" class="mdc-text-field__input" rows="8" cols="40"></textarea>
+      <label for="textarea" class="mdc-text-field__label">お問い合わせ内容</label>
+    </div>
+
+    <div id="recaptcha" class="g-recaptcha" data-sitekey="your_site_key"></div>
+
+    <p class="mdc-typography--body1">
+      *必ず上の □ をクリックして、✔ が表示されたことを確認した上で送信してください。 <br>
+      その前に送信ボタンを押すと、入力した内容が送信されずに消える可能性があります。
+    </p>
+
+    <button id="home_contact-form-submit" class="mdc-button mdc-button--raised">送信</button>
+
+
+  </form>
+</section>
 {{ end }}

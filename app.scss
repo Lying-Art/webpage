@@ -1,6 +1,9 @@
 @import "@material/button/mdc-button";
+@import "@material/ripple/mdc-ripple";
 @import "@material/animation/variables";
-
+@import "@material/typography/mdc-typography";
+@import "@material/layout-grid/mdc-layout-grid";
+@import "@material/textfield/mdc-text-field";
 
 
 // 変数定義
@@ -62,7 +65,7 @@ $home_anination-startup-span-5: 300ms;
   top: 0;
   left: 0;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   animation-name: startup-bg;
   animation-duration: $home_anination-startup-span-1;
   animation-timing-function: $mdc-animation-standard-curve-timing-function;
@@ -73,7 +76,7 @@ $home_anination-startup-span-5: 300ms;
 #home_header {
   background: url(/images/bg.jpg);
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 #home_header-logo {
@@ -105,4 +108,23 @@ $home_anination-startup-span-5: 300ms;
   animation-timing-function: $mdc-animation-standard-curve-timing-function;
   animation-delay: $home_anination-startup-span-0 + $home_anination-startup-span-1 + $home_anination-startup-span-2 + $home_anination-startup-span-3 + $home_anination-startup-span-4;
   animation-fill-mode: both;
+}
+
+.home_content {
+  width: 750px;
+  max-width: 100%;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding: 24px;
+}
+
+.home_contact-form > .mdc-text-field {
+  width: 100%;
+}
+
+#recaptcha {
+  margin-top: 16px;
 }
