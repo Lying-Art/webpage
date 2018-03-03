@@ -28,10 +28,10 @@
 
 <section id="home_contact" class="home_content mdc-typography--body1">
   <h1 class="mdc-typography--display2">Contact</h1>
-  <form class="home_contact-form" action="index.html" method="post">
+  <form name="Lying. 問い合わせフォーム" class="home_contact-form" action="index.html" netlify>
 
     <div class="mdc-text-field mdc-text-field--outlined">
-      <input type="text" id="tf-outlined" class="mdc-text-field__input">
+      <input name="名前" type="text" id="tf-outlined" class="mdc-text-field__input" autocomplete="name" required>
       <label for="tf-outlined" class="mdc-text-field__label">名前</label>
       <div class="mdc-text-field__outline">
         <svg>
@@ -42,7 +42,7 @@
     </div><br>
 
     <div class="mdc-text-field mdc-text-field--outlined">
-      <input type="text" id="tf-outlined" class="mdc-text-field__input">
+      <input name="メールアドレス" type="email" id="tf-outlined" class="mdc-text-field__input" autocomplete="email" required>
       <label for="tf-outlined" class="mdc-text-field__label">メールアドレス</label>
       <div class="mdc-text-field__outline">
         <svg>
@@ -53,7 +53,7 @@
     </div><br>
 
     <div class="mdc-text-field mdc-text-field--textarea">
-      <textarea id="textarea" class="mdc-text-field__input" rows="8" cols="40"></textarea>
+      <textarea name="問い合わせ内容" id="textarea" class="mdc-text-field__input" rows="8" cols="40" required></textarea>
       <label for="textarea" class="mdc-text-field__label">お問い合わせ内容</label>
     </div>
 
@@ -64,7 +64,7 @@
       その前に送信ボタンを押すと、入力した内容が送信されずに消える可能性があります。
     </p>
 
-    <button id="home_contact-form-submit" class="mdc-button mdc-button--raised">送信</button>
+    <button type="submit" id="home_contact-form-submit" class="mdc-button mdc-button--raised">送信</button>
 
 
   </form>

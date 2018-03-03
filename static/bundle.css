@@ -2300,7 +2300,9 @@
   animation-fill-mode: both; }
 
 #home_header {
-  background: url(/images/bg.jpg);
+  background-image: url(/images/bg.jpg);
+  background-size: cover;
+  background-position: left top;
   height: 100vh;
   width: 100%; }
 
