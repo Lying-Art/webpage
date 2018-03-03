@@ -1,2 +1,6 @@
 import {MDCRipple} from '@material/ripple';
-const ripple = new MDCRipple(document.querySelector('.foo-button'));
+
+var btns = document.querySelectorAll('.mdc-button');
+for (var i = 0, btn; btn = btns[i]; i++) {
+  MDCRipple.attachTo(btn);
+}

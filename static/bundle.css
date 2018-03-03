@@ -261,25 +261,81 @@
   font-size: .8125rem;
   line-height: 32px; }
 
-.foo-button:not(:disabled) {
-  color: teal; }
+@keyframes startup-bg {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
 
-.foo-button::before, .foo-button::after {
-  background-color: teal; }
+@keyframes startup-logo {
+  from {
+    padding-top: 42.5vh; }
+  to {
+    padding-top: 36.5vh; } }
 
-.foo-button:hover::before {
-  opacity: 0.04; }
+@keyframes startup-links {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5em); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
 
-.foo-button:not(.mdc-ripple-upgraded):focus::before, .foo-button.mdc-ripple-upgraded--background-focused::before {
-  transition-duration: 75ms;
-  opacity: 0.12; }
+.inline-block {
+  display: inline-block; }
 
-.foo-button:not(.mdc-ripple-upgraded)::after {
-  transition: opacity 150ms linear; }
+#home_bgcover {
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  animation-name: startup-bg;
+  animation-duration: 2000ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-delay: 1500ms;
+  animation-fill-mode: both; }
 
-.foo-button:not(.mdc-ripple-upgraded):active::after {
-  transition-duration: 75ms;
-  opacity: 0.16; }
+#home_header {
+  background: url(/images/bg.jpg);
+  height: 100vh;
+  width: 100vw; }
 
-.foo-button.mdc-ripple-upgraded {
-  --mdc-ripple-fg-opacity: 0.16; }
+#home_header-logo {
+  display: block;
+  height: 15vh;
+  position: relative;
+  padding-top: 42.5vh;
+  margin-left: auto;
+  margin-right: auto;
+  animation-name: startup-logo;
+  animation-duration: 500ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-delay: 3500ms;
+  animation-fill-mode: both; }
+
+.home_links {
+  margin-top: 1em;
+  text-align: center;
+  animation-name: startup-links;
+  animation-duration: 300ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-delay: 4000ms;
+  animation-fill-mode: both; }
+  .home_links .home_link:not(:disabled) {
+    color: white; }
+  .home_links .home_link::before, .home_links .home_link::after {
+    background-color: white; }
+  .home_links .home_link:hover::before {
+    opacity: 0.08; }
+  .home_links .home_link:not(.mdc-ripple-upgraded):focus::before, .home_links .home_link.mdc-ripple-upgraded--background-focused::before {
+    transition-duration: 75ms;
+    opacity: 0.24; }
+  .home_links .home_link:not(.mdc-ripple-upgraded)::after {
+    transition: opacity 150ms linear; }
+  .home_links .home_link:not(.mdc-ripple-upgraded):active::after {
+    transition-duration: 75ms;
+    opacity: 0.32; }
+  .home_links .home_link.mdc-ripple-upgraded {
+    --mdc-ripple-fg-opacity: 0.32; }

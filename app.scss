@@ -1,6 +1,108 @@
 @import "@material/button/mdc-button";
+@import "@material/animation/variables";
 
-.foo-button {
-  @include mdc-button-ink-color(teal);
-  @include mdc-states(teal);
+
+
+// 変数定義
+
+$home_logo-height: 15vh;
+
+// 0: 待機, 1:背景色変化中, 2: 待機, 3: ロゴ移動中, 4: 待機, 5:リンク変化中
+$home_anination-startup-span-0: 1500ms;
+$home_anination-startup-span-1: 2000ms;
+$home_anination-startup-span-2: 0ms;
+$home_anination-startup-span-3: 500ms;
+$home_anination-startup-span-4: 0ms;
+$home_anination-startup-span-5: 300ms;
+
+
+
+// キーフレーム定義
+
+@keyframes startup-bg {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes startup-logo {
+  from {
+    padding-top: (100 - $home_logo-height) / 2;
+  }
+  to {
+    padding-top: (100 - $home_logo-height) / 2 - 6vh;
+  }
+}
+
+@keyframes startup-links {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+// メイン
+
+.inline-block {
+  display: inline-block;
+}
+
+#home_bgcover {
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  animation-name: startup-bg;
+  animation-duration: $home_anination-startup-span-1;
+  animation-timing-function: $mdc-animation-standard-curve-timing-function;
+  animation-delay: $home_anination-startup-span-0;
+  animation-fill-mode: both;
+}
+
+#home_header {
+  background: url(/images/bg.jpg);
+  height: 100vh;
+  width: 100vw;
+}
+
+#home_header-logo {
+  display: block;
+  height: $home_logo-height;
+  position: relative;
+  padding-top: (100 - $home_logo-height) / 2;
+  margin-left: auto;
+  margin-right: auto;
+  animation-name: startup-logo;
+  animation-duration: $home_anination-startup-span-3;
+  animation-timing-function: $mdc-animation-standard-curve-timing-function;
+  animation-delay: $home_anination-startup-span-0 + $home_anination-startup-span-1 + $home_anination-startup-span-2;
+  animation-fill-mode: both;
+}
+
+.home_links {
+  .home_link {
+    $color: white;
+
+    @include mdc-button-ink-color($color);
+    @include mdc-states($color);
+  }
+
+  margin-top: 1em;
+  text-align: center;
+  animation-name: startup-links;
+  animation-duration: $home_anination-startup-span-5;
+  animation-timing-function: $mdc-animation-standard-curve-timing-function;
+  animation-delay: $home_anination-startup-span-0 + $home_anination-startup-span-1 + $home_anination-startup-span-2 + $home_anination-startup-span-3 + $home_anination-startup-span-4;
+  animation-fill-mode: both;
 }
