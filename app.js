@@ -3,7 +3,7 @@ import {MDCTextField} from '@material/textfield'
 import SweetScroll from "sweet-scroll"
 
 window.onload = () => {
-  window.scrollTo(0,0);
+  window.scrollTo(0,1);
 }
 
 var btns = document.querySelectorAll('.mdc-button');

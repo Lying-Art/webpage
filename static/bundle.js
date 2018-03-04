@@ -2576,7 +2576,7 @@ var _sweetScroll2 = _interopRequireDefault(_sweetScroll);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 window.onload = function () {
-  window.scrollTo(0, 0);
+  window.scrollTo(0, 1);
 };
 
 var btns = document.querySelectorAll('.mdc-button');
