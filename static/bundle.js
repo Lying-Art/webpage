@@ -2575,6 +2575,10 @@ var _sweetScroll2 = _interopRequireDefault(_sweetScroll);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+window.onload = function () {
+  window.scrollTo(0, 0);
+};
+
 var btns = document.querySelectorAll('.mdc-button');
 for (var i = 0, btn; btn = btns[i]; i++) {
   _ripple.MDCRipple.attachTo(btn);

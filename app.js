@@ -2,6 +2,10 @@ import {MDCRipple} from '@material/ripple';
 import {MDCTextField} from '@material/textfield'
 import SweetScroll from "sweet-scroll"
 
+window.onload = () => {
+  window.scrollTo(0,0);
+}
+
 var btns = document.querySelectorAll('.mdc-button');
 for (var i = 0, btn; btn = btns[i]; i++) {
   MDCRipple.attachTo(btn);
