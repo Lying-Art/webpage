@@ -132,6 +132,8 @@ $home_anination-startup-span-5: 300ms;
 #home_books-cardcontainer {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .home_books-card {

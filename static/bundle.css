@@ -2733,7 +2733,9 @@
 
 #home_books-cardcontainer {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding-top: 4px;
+  padding-bottom: 4px; }
 
 .home_books-card {
   width: 200px;
