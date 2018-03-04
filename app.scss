@@ -4,11 +4,13 @@
 @import "@material/typography/mdc-typography";
 @import "@material/layout-grid/mdc-layout-grid";
 @import "@material/textfield/mdc-text-field";
+@import "@material/card/mdc-card";
 
 
 // 変数定義
 
 $home_logo-height: 15vh;
+$home_content-width: 750px;
 
 // 0: 待機, 1:背景色変化中, 2: 待機, 3: ロゴ移動中, 4: 待機, 5:リンク変化中
 $home_anination-startup-span-0: 1500ms;
@@ -101,6 +103,8 @@ $home_anination-startup-span-5: 300ms;
 
     @include mdc-button-ink-color($color);
     @include mdc-states($color);
+
+    padding: 0 24px;
   }
 
   margin-top: 1em;
@@ -113,7 +117,7 @@ $home_anination-startup-span-5: 300ms;
 }
 
 .home_content {
-  width: 750px;
+  width: $home_content-width;
   max-width: 100%;
   margin-top: 24px;
   margin-bottom: 24px;
@@ -123,10 +127,95 @@ $home_anination-startup-span-5: 300ms;
   padding: 24px;
 }
 
+
+#home_books-cardcontainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home_books-card {
+  $width: 200px;
+
+  width: $width;
+  margin-left: 0;
+  margin-right: 16px;
+  margin-top: 0;
+  margin-bottom: 16px;
+
+  .home_books-card-media {
+    width: $width;
+    height: $width * 1.414213562;
+  }
+
+  .home_books-card-primary {
+    padding: 1rem;
+
+    h2 {
+      margin: 0;
+    }
+
+    h3 {
+      margin: 0;
+    }
+  }
+
+  .home_books-card-secondary {
+    color: rgba(0, 0, 0, 0.54);
+    padding: 0 1rem 8px 1rem;
+  }
+}
+
+.home_books-card-mobile-space {
+  display: none;
+  padding-left: 24px;
+}
+
+@media screen and (max-width: 500px) {
+  #home_books-cardcontainer {
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    position: relative;
+    left: -24px;
+    width: 100vw;
+  }
+  .home_books-card {
+    margin-left: 24px;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .home_books-card-mobile-space {
+    display: block;
+    padding-left: 24px;
+  }
+}
+
 .home_contact-form > .mdc-text-field {
   width: 100%;
 }
 
 #recaptcha {
   margin-top: 16px;
+}
+
+#home_contact-form-submit {
+  $color: black;
+
+  @include mdc-states($color);
+  @include mdc-button-container-fill-color($color);
+}
+
+.mdc-text-field:not(.mdc-text-field--focused) {
+  $color: black;
+
+  @include mdc-text-field-outline-color($color);
+  @include mdc-text-field-textarea-stroke-color($color);
+}
+
+.mdc-text-field.mdc-text-field--focused {
+  $color: black;
+
+  @include mdc-text-field-label-color($color);
+  @include mdc-text-field-focused-outline-color($color);
+  @include mdc-text-field-textarea-stroke-color($color);
 }
