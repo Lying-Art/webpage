@@ -2825,3 +2825,45 @@
   border-color: black; }
   .mdc-text-field.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-text-field__input:focus {
     border-color: black; }
+
+.blog_content {
+  color: rgba(0, 0, 0, 0.87);
+  width: 750px;
+  max-width: 100%;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding: 24px; }
+
+.blog_content:first-of-type {
+  margin-top: 0; }
+
+.blog_header-logo {
+  display: block;
+  width: 200px;
+  max-width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px;
+  margin-bottom: 0; }
+
+.blog_list-link {
+  color: inherit;
+  text-decoration: none; }
+  .blog_list-link:hover {
+    text-decoration: underline; }
+
+.blog_content-article img {
+  margin: 0 auto;
+  display: block;
+  width: 70%; }
+
+.blog_content-date {
+  margin-top: 0;
+  margin-bottom: 0.4em;
+  color: rgba(0, 0, 0, 0.54); }
+
+.blog_content-title {
+  margin: 0; }

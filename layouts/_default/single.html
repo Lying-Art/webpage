@@ -1,7 +1,21 @@
 {{ define "main" }}
-  {{ partial "header.html" . }}
 
-  {{ .Content }}
+{{ partial "header.html" . }}
 
-  {{ partial "footer.html" . }}
+<section class="blog_content mdc-typography--body1">
+
+  <main class="blog_content-article">
+    <div>
+      <p class="mdc-typography--subheading2 blog_content-date">{{ .PublishDate.Format "2006-01-02" }}</p>
+      <h1 class="mdc-typography--display2 blog_content-title">{{ .Title }}</h1>
+    </div>
+    <div class="blog_content-body">
+      {{ .Content }}
+    </div>
+  </main>
+
+</section>
+
+{{ partial "footer.html" . }}
+
 {{ end }}
