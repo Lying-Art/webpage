@@ -64,7 +64,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a:not(.mdc-button) {
+a:not(.mdc-button):not(.blog_list-link) {
   color: #1976d2;
   text-decoration: none;
 
