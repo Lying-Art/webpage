@@ -1,7 +1,9 @@
 {{ define "main" }}
 <div id="home_bgcover"></div>
 <section id="home_header">
-  <img src="/images/lying-logo.svg" alt="lying." id="home_header-logo">
+  <div id="home_header-logo">
+    {{ partial "logo.svg" . }}
+  </div>
   <div class="home_links">
     <div class="inline-block">
       <a href="#home_about" class="mdc-button home_link" data-mt-duration="300">About</a>

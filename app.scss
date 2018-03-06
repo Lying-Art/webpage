@@ -104,17 +104,21 @@ a:not(.mdc-button):not(.blog_list-link) {
 }
 
 #home_header-logo {
-  display: block;
-  height: $home_logo-height;
   position: relative;
   padding-top: (100 - $home_logo-height) / 2;
-  margin-left: auto;
-  margin-right: auto;
   animation-name: startup-logo;
   animation-duration: $home_anination-startup-span-3;
   animation-timing-function: $mdc-animation-standard-curve-timing-function;
   animation-delay: $home_anination-startup-span-0 + $home_anination-startup-span-1 + $home_anination-startup-span-2;
   animation-fill-mode: both;
+
+  & > svg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: $home_logo-height;
+    fill: white;
+  }
 }
 
 .home_links {
@@ -263,16 +267,21 @@ a:not(.mdc-button):not(.blog_list-link) {
 
 .blog_header-logo-link {
   display: block;
-}
-
-.blog_header-logo {
-  display: block;
-  width: 200px;
-  max-width: 35%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 24px;
   margin-bottom: 0;
+  width: 200px;
+  max-width: 35%;
+
+  & > svg {
+    display: block;
+    fill: rgba(0,0,0,0.87);
+  }
+}
+
+.blog_header-logo {
+
 }
 
 .blog_list-link {
