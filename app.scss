@@ -59,6 +59,11 @@ $home_anination-startup-span-5: 300ms;
 
 // ホーム
 
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
 a:not(.mdc-button) {
   color: #1976d2;
   text-decoration: none;
