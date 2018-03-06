@@ -7,6 +7,7 @@
 @import "@material/card/mdc-card";
 
 
+
 // 変数定義
 
 $home_logo-height: 15vh;
@@ -57,6 +58,19 @@ $home_anination-startup-span-5: 300ms;
 
 
 // ホーム
+
+a {
+  color: #1976d2;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: #512da8;
+  }
+}
 
 .inline-block {
   display: inline-block;
