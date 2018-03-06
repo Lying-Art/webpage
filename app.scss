@@ -1,3 +1,18 @@
+a {
+  color: #1976d2;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: #512da8;
+  }
+}
+
+
+
 @import "@material/button/mdc-button";
 @import "@material/ripple/mdc-ripple";
 @import "@material/animation/variables";
@@ -58,19 +73,6 @@ $home_anination-startup-span-5: 300ms;
 
 
 // ホーム
-
-a {
-  color: #1976d2;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-
-  &:visited {
-    color: #512da8;
-  }
-}
 
 .inline-block {
   display: inline-block;
