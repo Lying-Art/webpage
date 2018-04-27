@@ -51,4 +51,8 @@ draft: false
 
 「**ここまで読んだなら支援してくれません？**」
 
+[支援する](https://www.pixiv.net/fanbox/creator/14646991?utm_campaign=www_profile&utm_medium=site_flow&utm_source=pixiv)
+
+[支援しない](https://twitter.com/artsbykgmnx)
+
 では、また。
