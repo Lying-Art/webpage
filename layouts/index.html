@@ -34,6 +34,14 @@
   <h1 class="mdc-typography--display2">Books</h1>
   <section id="home_books-cardcontainer">
 
+    {{ range $.Site.Data.books }}
+      <div class="home_books-card mdc-card">
+        <a href="{{ .url }}" class="mdc-card__primary-action">
+          <div class="home_books-card-media mdc-card__media mdc-card__media--16-9	" style='background-image: url("{{ .cover }}");'></div>
+        </a>
+      </div>
+    {{ end }}
+
     <div class="home_books-card mdc-card">
       <a href="https://kgmnx.booth.pm/items/726233" class="mdc-card__primary-action">
         <div class="home_books-card-media mdc-card__media mdc-card__media--16-9	" style='background-image: url("/images/books/re_join.png");'></div>
