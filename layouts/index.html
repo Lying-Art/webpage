@@ -36,7 +36,7 @@
 
     {{ range $.Site.Data.books }}
       <div class="home_books-card mdc-card">
-        <a href="{{ .url }}" class="mdc-card__primary-action">
+        <a href="{{ .url }}" class="mdc-card__primary-action" title="{{ .title }}">
           <div class="home_books-card-media mdc-card__media mdc-card__media--16-9	" style='background-image: url("{{ .cover }}");'></div>
         </a>
       </div>

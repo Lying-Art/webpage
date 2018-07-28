@@ -25,5 +25,6 @@ collections:
     extension: yml
     format: yml
     fields: # The fields for each document, usually in front matter
-      - {label: "表紙画像(横:縦=1:√2)", name: "cover", widget: "image"}
+      - {label: "書籍名", name: "title", widget: "string"}
       - {label: "リンク先URL", name: "url", widget: "string"}
+      - {label: "表紙画像(横:縦=1:√2)", name: "cover", widget: "image"}
