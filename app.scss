@@ -216,6 +216,12 @@ a:not(.mdc-button):not(.blog_list-link) {
   }
 }
 
+#home_update img {
+  margin: 0 auto;
+  display: block;
+  width: 70%;
+}
+
 .home_contact-form > .mdc-text-field {
   width: 100%;
 }
