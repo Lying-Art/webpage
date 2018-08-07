@@ -34,7 +34,7 @@
   <h1 class="mdc-typography--display2">Books</h1>
   <section id="home_books-cardcontainer">
 
-    {{ range $.Site.Data.books }}
+    {{ range sort "date" "desc" $.Site.Data.books }}
       <div class="home_books-card mdc-card">
         <a href="{{ .url }}" class="mdc-card__primary-action" title="{{ .title }}">
           <div class="home_books-card-media mdc-card__media mdc-card__media--16-9	" style='background-image: url("{{ .cover }}");'></div>
