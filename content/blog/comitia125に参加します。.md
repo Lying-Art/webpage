@@ -5,9 +5,9 @@ draft: false
 ---
 かぐまにくすです。
 
-まず最初に夏コミお疲れ様でした！あまりHPはだらだら書きたくないのでFANBOXを参照してください。
+まず最初に夏コミお疲れ様でした！あまりHPはだらだら書きたくないので詳細はFANBOXを参照してください。
 
-[FANBOX](https://www.pixiv.net/fanbox/creator/14646991/post/127945)
+[夏コミ感想](https://www.pixiv.net/fanbox/creator/14646991/post/126315)
 
 さて、本題ですが。
 
