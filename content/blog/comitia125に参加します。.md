@@ -11,13 +11,13 @@ draft: false
 
 さて、本題ですが。
 
-8月19日日曜日に開催のCOMITIA125に参加します。
+**8月19日日曜日**に開催のCOMITIA125に参加します。
 
 スペースは**さ02a**になります。
 
 こちらお品書き
 
-![](/images/uploads/lineup125.png)
+![null](/images/uploads/lineup125.png)
 
 既刊のRe joinですが、夏コミで売り切れてしまいスパンが短かったため増刷する余裕がありませんでした。
 
