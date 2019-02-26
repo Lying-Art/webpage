@@ -12,6 +12,8 @@
 .mdc-typography--headline5,
 .mdc-typography--headline6 {
   color: rgba(0, 0, 0, mdc-theme-text-emphasis(high));
+  position: relative;
+  left: -.06em;
 }
 
 .mdc-typography--body1,
