@@ -1,3 +1,5 @@
 public
 static/node/node_modules
 node_modules
+static/bundle.css
+static/bundle.js
