@@ -3,8 +3,8 @@
     "start": "webpack-dev-server",
     "webpack": "webpack",
     "hugo": "hugo",
-    "build": "webpack && hugo",
-    "serve": "webpack --watch & hugo server"
+    "build": "webpack --optimize-minimize && hugo",
+    "serve": "webpack --optimize-minimize --watch & hugo server"
   },
   "devDependencies": {
     "autoprefixer": "^9.4.8",
