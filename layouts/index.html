@@ -39,7 +39,7 @@
 
     {{ range sort $.Site.Data.books "date" "desc" }}
       <div class="home_books-card mdc-card">
-        <a href="{{ .url }}" class="mdc-card__primary-action" title="{{ .title }}">
+        <a href="{{ .url }}" class="mdc-card__primary-action book-card" title="{{ .title }}">
           <div class="home_books-card-media mdc-card__media mdc-card__media--16-9	" style='background-image: url("{{ .cover }}");'></div>
         </a>
       </div>
