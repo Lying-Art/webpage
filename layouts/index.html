@@ -21,7 +21,7 @@
 </section>
 
 <section id="home_about" class="home_content mdc-typography--body1">
-  <h1 class="mdc-typography--display2">About</h1>
+  <h1 class="mdc-typography--headline3">About</h1>
   <p>
     初めまして、かぐまにくすと申します。 <br>
     <br>
@@ -34,7 +34,7 @@
 </section>
 
 <section id="home_books" class="home_content mdc-typography--body1">
-  <h1 class="mdc-typography--display2">Books</h1>
+  <h1 class="mdc-typography--headline3">Books</h1>
   <section id="home_books-cardcontainer">
 
     {{ range sort $.Site.Data.books "date" "desc" }}
@@ -50,16 +50,16 @@
 </section>
 
 <section id="home_update" class="home_content mdc-typography--body1">
-  <h1 class="mdc-typography--display2">Update</h1>
+  <h1 class="mdc-typography--headline3">Update</h1>
   {{ range first 1 .Pages }}
     <p class="mdc-typography--subheading1 blog_content-date">{{ .PublishDate.Format "2006-01-02" }}</p>
-    <h2 class="mdc-typography--display1 blog_content-title">{{ .Title }}</h1>
+    <h2 class="mdc-typography--headline4 blog_content-title">{{ .Title }}</h1>
     {{ .Content }}
   {{ end }}
 </section>
 
 <section id="home_contact" class="home_content mdc-typography--body1">
-  <h1 class="mdc-typography--display2">Contact</h1>
+  <h1 class="mdc-typography--headline3">Contact</h1>
   <form name="問い合わせフォーム" class="home_contact-form" netlify-honeypot="phonenumber" action="thank-you" method="POST" netlify>
 
     <div style="display: none">
