@@ -5,7 +5,19 @@
 @import "@material/layout-grid/mdc-layout-grid";
 @import "@material/textfield/mdc-text-field";
 @import "@material/card/mdc-card";
+.mdc-typography--headline1,
+.mdc-typography--headline2,
+.mdc-typography--headline3,
+.mdc-typography--headline4,
+.mdc-typography--headline5,
+.mdc-typography--headline6 {
+  color: rgba(0, 0, 0, mdc-theme-text-emphasis(high));
+}
 
+.mdc-typography--body1,
+.mdc-typography--body2 {
+  color: rgba(0, 0, 0, mdc-theme-text-emphasis(medium));
+}
 
 
 // 変数定義
