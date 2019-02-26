@@ -20,9 +20,9 @@
   </div>
 </section>
 
-<section id="home_about" class="home_content mdc-typography--body1">
+<section id="home_about" class="home_content">
   <h1 class="mdc-typography--headline3">About</h1>
-  <p>
+  <p class="mdc-typography--body1">
     初めまして、かぐまにくすと申します。 <br>
     <br>
     サークル Lying. にて背景やコンセプトアートを製作しております。 <br>
@@ -33,7 +33,7 @@
   </p>
 </section>
 
-<section id="home_books" class="home_content mdc-typography--body1">
+<section id="home_books" class="home_content">
   <h1 class="mdc-typography--headline3">Books</h1>
   <section id="home_books-cardcontainer">
 
@@ -49,16 +49,18 @@
   </section>
 </section>
 
-<section id="home_update" class="home_content mdc-typography--body1">
+<section id="home_update" class="home_content">
   <h1 class="mdc-typography--headline3">Update</h1>
   {{ range first 1 .Pages }}
     <p class="mdc-typography--subheading1 blog_content-date">{{ .PublishDate.Format "2006-01-02" }}</p>
     <h2 class="mdc-typography--headline4 blog_content-title">{{ .Title }}</h1>
-    {{ .Content }}
+    <div class="mdc-typography--body1">
+      {{ .Content }}
+    </div>
   {{ end }}
 </section>
 
-<section id="home_contact" class="home_content mdc-typography--body1">
+<section id="home_contact" class="home_content">
   <h1 class="mdc-typography--headline3">Contact</h1>
   <form name="問い合わせフォーム" class="home_contact-form" netlify-honeypot="phonenumber" action="thank-you" method="POST" netlify>
 
