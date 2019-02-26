@@ -1,21 +1,22 @@
 {{ define "main" }}
-  {{ partial "header.html" . }}
+{{ partial "header.html" . }}
 
-  {{ range .Data.Pages }}
-  <section class="blog_content mdc-typography--body1">
+{{ range .Data.Pages }}
+<section class="blog_content mdc-typography--body1">
 
-    <main class="blog_content-article">
-      <div>
-        <p class="mdc-typography--subheading2 blog_content-date">{{ .PublishDate.Format "2006-01-02" }}</p>
-        <h1 class="mdc-typography--display2 blog_content-title"><a class="blog_list-link" href="{{ .Permalink }}">{{ .Title }}</a></h1>
-      </div>
-      <div class="blog_content-body">
-        {{ .Content }}
-      </div>
-    </main>
+  <main class="blog_content-article">
+    <div>
+      <p class="mdc-typography--subheading2 blog_content-date">{{ .PublishDate.Format "2006-01-02" }}</p>
+      <h1 class="mdc-typography--headline3 blog_content-title"><a class="blog_list-link"
+          href="{{ .Permalink }}">{{ .Title }}</a></h1>
+    </div>
+    <div class="blog_content-body">
+      {{ .Content }}
+    </div>
+  </main>
 
-  </section>
-  {{ end }}
+</section>
+{{ end }}
 
-  {{ partial "footer.html" . }}
+{{ partial "footer.html" . }}
 {{ end }}
