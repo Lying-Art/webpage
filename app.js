@@ -20,7 +20,6 @@ textFields.forEach(function (textField) {
 
 const sweetScroll = new SweetScroll({ trigger: "a[href^='#']" });
 
-grecaptcha.execute();
 // function onSubmit(token) {
 //   document.querySelector('.home_contact-form').submit();
 // }
