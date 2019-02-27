@@ -37,12 +37,18 @@ const sweetScroll = new SweetScroll({ trigger: "a[href^='#']" });
 window.onload = function () {
   document.getElementById('home_contact-form-submit').onclick = function () {
     grecaptcha.execute();
-    while (true) {
+    const loop = setInterval(function () {
       if (!!grecaptcha.getResponse()) {
         document.getElementById("contact-form").submit();
-        return;
+        clearInterval(loop);
       }
-    }
+    }, 100)
+    // while (true) {
+    //   if (!!grecaptcha.getResponse()) {
+    //     document.getElementById("contact-form").submit();
+    //     return;
+    //   }
+    // }
   }
 }
 // function validate(event) {
