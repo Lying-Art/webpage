@@ -30,3 +30,21 @@ const sweetScroll = new SweetScroll({ trigger: "a[href^='#']" });
 // function onSubmit(token) {
 //   document.querySelector('.home_contact-form').submit();
 // }
+// function onSubmit(token) {
+//   document.getElementById("contact-form").submit();
+// }
+
+function validate(event) {
+  grecaptcha.execute();
+  while (true) {
+    if (!!grecaptcha.getResponse()) {
+      document.getElementById("contact-form").submit();
+      return;
+    }
+  }
+}
+
+function onload() {
+  var element = document.getElementById('home_contact-form-submit');
+  element.onclick = validate;
+}
