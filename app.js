@@ -36,6 +36,10 @@ const sweetScroll = new SweetScroll({ trigger: "a[href^='#']" });
 
 window.onload = function () {
   document.getElementById('home_contact-form-submit').onclick = function () {
+    if (!document.getElementById("contact-form").checkValidity()) {
+      alert("入力内容に誤りがあります。")
+      return;
+    }
     grecaptcha.execute();
     const loop = setInterval(function () {
       if (!!grecaptcha.getResponse()) {
