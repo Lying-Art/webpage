@@ -7,6 +7,7 @@ sans-serif;
 @import "@material/typography/mdc-typography";
 @import "@material/layout-grid/mdc-layout-grid";
 @import "@material/textfield/mdc-text-field";
+@import "@material/textfield/helper-text/mdc-text-field-helper-text";
 @import "@material/card/mdc-card";
 .mdc-typography--headline1,
 .mdc-typography--headline2,
@@ -224,7 +225,7 @@ a:not(.mdc-button):not(.blog_list-link) {
 }
 #home_contact {
   .contact-input {
-    margin: .8em 0;
+    margin: .4em 0 0 0;
   }
   .contact-bottom-container {
     display: flex;
