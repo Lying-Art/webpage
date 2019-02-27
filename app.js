@@ -34,17 +34,28 @@ const sweetScroll = new SweetScroll({ trigger: "a[href^='#']" });
 //   document.getElementById("contact-form").submit();
 // }
 
-function validate(event) {
-  grecaptcha.execute();
-  while (true) {
-    if (!!grecaptcha.getResponse()) {
-      document.getElementById("contact-form").submit();
-      return;
+window.onload = function () {
+  document.getElementById('home_contact-form-submit').onclick = function () {
+    grecaptcha.execute();
+    while (true) {
+      if (!!grecaptcha.getResponse()) {
+        document.getElementById("contact-form").submit();
+        return;
+      }
     }
   }
 }
+// function validate(event) {
+//   grecaptcha.execute();
+//   while (true) {
+//     if (!!grecaptcha.getResponse()) {
+//       document.getElementById("contact-form").submit();
+//       return;
+//     }
+//   }
+// }
 
-function onload() {
-  var element = document.getElementById('home_contact-form-submit');
-  element.onclick = validate;
-}
+// function onload() {
+//   var element = document.getElementById('home_contact-form-submit');
+//   element.onclick = validate;
+// }
