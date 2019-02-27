@@ -222,10 +222,21 @@ a:not(.mdc-button):not(.blog_list-link) {
 .home_contact-form>.mdc-text-field {
   width: 100%;
 }
-
-#recaptcha {
-  margin-top: 16px;
+#home_contact {
+  .contact-input {
+    margin: .8em 0;
+  }
+  .contact-bottom-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .g-recaptcha {
+    // margin-top: 16px;
+  }
 }
+
 
 #home_contact-form-submit {
   $color: black;
