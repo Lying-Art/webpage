@@ -231,9 +231,13 @@ a:not(.mdc-button):not(.blog_list-link) {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-  }
-  .g-recaptcha {
-    // margin-top: 16px;
+    flex-wrap: wrap-reverse;
+    .g-recaptcha, button {
+      margin: .8em 0;
+    }
+    button {
+      margin-right: 1em;
+    }
   }
 }
 
