@@ -78,50 +78,59 @@
 
 <section id="home_contact" class="home_content">
   <h1 class="mdc-typography--headline3">Contact</h1>
-  <form name="問い合わせフォーム" class="home_contact-form" netlify-honeypot="phonenumber" action="thank-you" method="POST" netlify>
+  <form id="contact-form" name="問い合わせフォーム" class="home_contact-form" netlify-honeypot="phonenumber" action="thank-you" method="POST" netlify>
 
     <div style="display: none">
       <label>あなたが人間である場合、この欄は空欄のままにしてください: <input name="phonenumber"></label>
     </div>
 
-    <div class="mdc-text-field mdc-text-field--outlined">
+    <div class="mdc-text-field mdc-text-field--outlined contact-input">
       <input name="お名前" type="text" id="tf-outlined" class="mdc-text-field__input" autocomplete="name" required>
-      <label for="tf-outlined" class="mdc-text-field__label">お名前</label>
-      <div class="mdc-text-field__outline">
-        <svg>
-          <path class="mdc-text-field__outline-path"/>
-        </svg>
+      <div class="mdc-notched-outline">
+        <div class="mdc-notched-outline__leading"></div>
+        <div class="mdc-notched-outline__notch">
+          <label for="tf-outlined" class="mdc-floating-label">お名前</label>
+        </div>
+        <div class="mdc-notched-outline__trailing"></div>
       </div>
-      <div class="mdc-text-field__idle-outline"></div>
-    </div><br>
+    </div>
+    <div class="mdc-text-field-helper-line">
+      <div class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg">
+        この項目は必須です
+      </div>
+    </div>
 
-    <div class="mdc-text-field mdc-text-field--outlined">
+    <div class="mdc-text-field mdc-text-field--outlined contact-input">
       <input name="メールアドレス" type="email" id="tf-outlined" class="mdc-text-field__input" autocomplete="email" required>
-      <label for="tf-outlined" class="mdc-text-field__label">メールアドレス</label>
-      <div class="mdc-text-field__outline">
-        <svg>
-          <path class="mdc-text-field__outline-path"/>
-        </svg>
+      <div class="mdc-notched-outline">
+        <div class="mdc-notched-outline__leading"></div>
+        <div class="mdc-notched-outline__notch">
+          <label for="tf-outlined" class="mdc-floating-label">メールアドレス</label>
+        </div>
+        <div class="mdc-notched-outline__trailing"></div>
       </div>
-      <div class="mdc-text-field__idle-outline"></div>
-    </div><br>
+    </div>
+    <div class="mdc-text-field-helper-line">
+      <div class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg">
+        この項目は必須です
+      </div>
+    </div>
 
-    <div class="mdc-text-field mdc-text-field--textarea">
+    <div class="mdc-text-field mdc-text-field--textarea contact-input">
       <textarea name="問い合わせ内容" id="textarea" class="mdc-text-field__input" rows="8" cols="40" required></textarea>
-      <label for="textarea" class="mdc-text-field__label">お問い合わせ内容</label>
+      <div class="mdc-notched-outline">
+        <div class="mdc-notched-outline__leading"></div>
+        <div class="mdc-notched-outline__notch">
+          <label for="textarea" class="mdc-floating-label">お問い合わせ内容</label>
+        </div>
+        <div class="mdc-notched-outline__trailing"></div>
+      </div>
     </div>
-
-    <div id="recaptcha">
-      <div class="g-recaptcha" data-sitekey="6LfiJpQUAAAAAADnXMmxtgClhEVQRBY64jytt09b" data-badge="inline" data-callback="onSubmit" data-size="invisible"></div>
-      <!-- <div netlify-recaptcha></div> -->
+    
+    <div class="contact-bottom-container">
+      <button type="button" id="home_contact-form-submit" class="mdc-button mdc-button--raised">送信</button>
+      <div class="g-recaptcha" data-sitekey="6LfiJpQUAAAAAADnXMmxtgClhEVQRBY64jytt09b" data-badge="inline" data-size="invisible"></div>
     </div>
-
-    <!-- <p class="mdc-typography--body1">
-      *必ず上の □ をクリックして、✔ が表示されたことを確認した上で送信してください。 <br>
-      その前に送信ボタンを押すと、入力した内容が送信されずに消える可能性があります。
-    </p> -->
-
-    <button type="submit" id="home_contact-form-submit" class="mdc-button mdc-button--raised">送信</button>
 
   </form>
 
