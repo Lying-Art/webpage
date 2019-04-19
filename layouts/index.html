@@ -36,7 +36,7 @@
 
 <section id="home_works" class="home_content">
   <h1 class="mdc-typography--headline3">Works</h1>
-  {{ range $.Site.Data.works  }}
+  {{ range $.Site.Data.works.item  }}
     <p class="mdc-typography--body1">
       <span class="work_first_line">{{ .first_line }}</span><br>
       {{ .second_line }}
