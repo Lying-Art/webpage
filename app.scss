@@ -9,6 +9,8 @@ sans-serif;
 @import "@material/textfield/mdc-text-field";
 @import "@material/textfield/helper-text/mdc-text-field-helper-text";
 @import "@material/card/mdc-card";
+@import "@material/list/mdc-list";
+
 .mdc-typography--headline1,
 .mdc-typography--headline2,
 .mdc-typography--headline3,
@@ -27,7 +29,7 @@ sans-serif;
 
 // 変数定義
 $home_logo-height: 15vh;
-$home_content-width: 750px;
+$home_content-width: 750px+32px;
 $blog_content-width: 750px;
 // 0: 待機, 1:背景色変化中, 2: 待機, 3: ロゴ移動中, 4: 待機, 5:リンク変化中
 $home_anination-startup-span-0: 1500ms;
@@ -36,6 +38,20 @@ $home_anination-startup-span-2: 0ms;
 $home_anination-startup-span-3: 500ms;
 $home_anination-startup-span-4: 0ms;
 $home_anination-startup-span-5: 300ms;
+
+// メディアクエリ用ミックスイン
+@mixin max-width($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin min-width($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
 // キーフレーム定義
 @keyframes startup-bg {
   from {
@@ -153,7 +169,17 @@ a:not(.mdc-button):not(.blog_list-link) {
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
-  padding: 24px;
+  padding: 24px 0;
+
+  >* {
+    padding: 0 16px;
+  }
+}
+
+#home_works {
+  .work_first_line {
+    color: rgba(0, 0, 0, mdc-theme-text-emphasis(high))
+  }
 }
 
 #home_books-cardcontainer {
@@ -199,14 +225,18 @@ a:not(.mdc-button):not(.blog_list-link) {
     overflow-x: scroll;
     flex-wrap: nowrap;
     position: relative;
-    left: -24px;
-    width: 100vw;
+    width: 100%;
+    padding: 4px 0;
   }
   .home_books-card {
-    margin-left: 24px;
+    margin-left: 16px;
     margin-right: 0;
     margin-top: 0;
     margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 16px;
+    }
   }
   .home_books-card-mobile-space {
     display: block;

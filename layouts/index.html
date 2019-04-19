@@ -10,10 +10,11 @@
   <div class="home_links">
     <div class="inline-block">
       <a href="#home_about" class="mdc-button home_link" data-mt-duration="300">About</a>
+      <a href="#home_works" class="mdc-button home_link">Works</a>
       <a href="#home_books" class="mdc-button home_link">Books</a>
-      <a href="/blog" class="mdc-button home_link">Blog</a>
     </div>
     <div class="inline-block">
+      <a href="/blog" class="mdc-button home_link">Blog</a>
       <a href="#home_contact" class="mdc-button home_link">Contact</a>
       <a href="https://www.pixiv.net/member.php?id=14646991" class="mdc-button home_link">Pixiv</a>
     </div>
@@ -35,18 +36,12 @@
 
 <section id="home_works" class="home_content">
   <h1 class="mdc-typography--headline3">Works</h1>
-  <table class="works_table">
-    <tr class="works_table_row">
-      <td class="works_table_col1">2014.01</td>
-      <td class="works_table_col2">ほげほげ</td>
-      <td class="works_table_col3">背景</td>
-    </tr>
-    <tr class="works_table_row">
-      <td class="works_table_col1">2014.02</td>
-      <td class="works_table_col2">HogeHoge</td>
-      <td class="works_table_col3">コンセプトアート</td>
-    </tr>
-  </table>
+  {{ range $.Site.Data.works  }}
+    <p class="mdc-typography--body1">
+      <span class="work_first_line">{{ .first_line }}</span><br>
+      {{ .second_line }}
+    </p>
+  {{ end }}
 </section>
 
 <section id="home_books" class="home_content">
