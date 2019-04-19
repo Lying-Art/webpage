@@ -97,6 +97,11 @@ a:not(.mdc-button):not(.blog_list-link) {
   // color: #1976d2;
   color: rgba(0, 0, 0, mdc-theme-text-emphasis(high));
   text-decoration: none;
+
+  p>& {
+    text-decoration-line: underline;
+  }
+
   &:hover {
     text-decoration: underline;
   }
@@ -104,6 +109,11 @@ a:not(.mdc-button):not(.blog_list-link) {
     // color: #512da8;
     color: rgba(0, 0, 0, mdc-theme-text-emphasis(high));
   }
+}
+
+strong {
+  font-weight: inherit;
+  color: rgba(0, 0, 0, mdc-theme-text-emphasis(high));
 }
 
 .inline-block {
