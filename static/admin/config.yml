@@ -36,9 +36,15 @@ collections:
     label: "Works" # Used in the UI
     files:
       - file: "data/works.yml" # The path to the folder where the documents are stored
+        name: "works"
+        label: "実績"
         fields: # The fields for each document, usually in front matter
-          - {label: "一行目", name: "first_line", widget: "string"}
-          - {label: "二行目", name: "second_line", widget: "string"}
+          - label: "項目"
+            name: "item"
+            widget: list
+            fields:
+              - {label: "一行目", name: "first_line", widget: "string"}
+              - {label: "二行目", name: "second_line", widget: "string"}
         editor:
           preview: false
         summary: "{{ first_line }} | {{ second_line }}"
