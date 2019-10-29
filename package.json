@@ -20,7 +20,7 @@
     "sass-loader": "^7.1.0",
     "webpack": "3",
     "webpack-dev-server": "2",
-    "yarn": "^1.13.0"
+    "yarn": "^1.17.3"
   },
   "dependencies": {
     "@material/animation": "^0.41.0",
