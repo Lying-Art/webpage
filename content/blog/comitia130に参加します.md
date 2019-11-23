@@ -1,7 +1,7 @@
 ---
 title: COMITIA130に参加します
 date: '2019-11-24T00:00:21+09:00'
-draft: true
+draft: false
 ---
 スーパーぎりぎりになってすいません。
 
@@ -13,7 +13,7 @@ draft: true
 
 こちらお品書き（出先なので画質落とせないからpixivのリンクですいません）
 
-
+https://www.pixiv.net/artworks/77959503
 
 ゲストに友達のHirくんを迎えてポストカードを新しく2つ作りました。
 
